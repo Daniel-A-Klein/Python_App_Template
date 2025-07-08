@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling >= 1.26", "hatch", "hatch-vcs","wheel"]
+build-backend = "hatchling.build"
+
+[project]
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.13"
+]
+dynamic = ["version"]
+name = "app_name"
+description = "Template for executable python console application."
+requires-python = ">= 3.13"
+readme = "README.md"
+license-files = ["LICENSE"]
+keywords = ["python", "template", "application"]
+
+authors = [
+  {name = "Aut Hors", email = "AHors@example.com"},
+  {name = "Dev Eloper", email = "DEloper@example.com"},
+]
+maintainers = [
+  {name = "Main Tainer", email = "MTainer@example.com"}
+]
+
+dependencies = []
+
+[project.scripts]
+app_name = "app_name.app:main"
+
+[project.urls]
+Repository = "https://github.com/Daniel-A-Klein/Python_App_Template"
+Issues = "https://github.com/Daniel-A-Klein/Python_App_Template/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/app_name"]
+
+[tool.hatch.version]
+source = "vcs"
