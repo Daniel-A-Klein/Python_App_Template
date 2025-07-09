@@ -46,13 +46,17 @@ Windows:
 ```bash
 pip install .\dist\insert_wheel_name.whl
 ```
-Linus:
+## Docker Build Instructions
+This code can also be built into a docker container to allow for compatibility across operating systems. This can be using the following command:
 ```bash
-pip install ./dist/insert_wheel_name.whl
+docker build -t app_name:dev .
 ```
+This command will built up a docker image with the name "app_name:dev".
 
 ## Launching Application
-Once the wheel has been built and installed in your virtual environment you can launch the application using the following command:
+Once the wheel has been built and installed in your virtual environment you can launch the application locally using the following command:
 ```bash
 app_name
 ```
+Or you can launch the docker container with the following command
+docker run -it app_name:dev
